@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Password Analysis Results</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Analysis Results</h1>
+        <p>Your password: {{ password }}</p>
+        {% if analysis_results %}
+            <ul>
+                {% for result in analysis_results %}
+                    <li>{{ result }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Your password is strong!</p>
+        {% endif %}
+
+    </div>
+</body>
+</html>

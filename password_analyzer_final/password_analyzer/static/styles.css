@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/3.jpg);
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.container {
+    text-align: center;
+    background-color: #E0E0E0; /* Change the background color to your desired color */
+    border: 3px solid grey; /* Add a border with a 2px width and a gray color */
+    padding-top: 50px; /* Add padding to create space around the content */
+    padding-bottom: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    }
