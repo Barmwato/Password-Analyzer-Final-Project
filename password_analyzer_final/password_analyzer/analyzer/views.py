@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.hashers import make_password  # for password hashing
-from .models import Password  # assuming you have a Password model
+from .models import Password
 import math
 import re
 from collections import Counter
@@ -29,13 +29,10 @@ def analyze_password(request):
         if password.lower() in open("common_passwords.txt").read().splitlines():
             analysis_results.append("Password is a common password.")
 
-        # Additional security (optional)
-        # Check against a dictionary of leaked passwords
-        # ... (implement if needed)
 
-        # Store password securely in the database (optional)
+        # Store password securely in the database
         hashed_password = make_password(password)
-        new_password = Password(password=hashed_password)  # assuming your model has a password field
+        new_password = Password(password=hashed_password)
         new_password.save()  # save the password (hashed)
 
         context = {'password': password, 'analysis_results': analysis_results}
